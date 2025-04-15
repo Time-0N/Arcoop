@@ -1,0 +1,184 @@
+
+
+/*Settings*/
+.settings-page {
+    overflow: hidden;
+    font-family: Coop;
+    z-index: 2;
+    background-image: url("../../assets/Settings/Settings_Background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/*Settings buttons*/
+.change-account-button, .delete-account-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 200px;
+}
+
+.change-account-button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.change-account-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.delete-account-button {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.delete-account-button:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+/*Modal*/
+.modal-account, .modal-delete {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.modal-content {
+    width: 500px;
+    margin: auto;
+    background-color: darkgray;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-account-header, .modal-delete-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-weight: bold;
+    background-color: grey;
+    color: #333;
+    border-radius: 8px 8px 0 0;
+}
+
+.modal-account-body, .modal-delete-body {
+    padding: 20px;
+}
+
+.modal-account-header .btn-close, .modal-delete-header .btn-close {
+    padding: 5px;
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.modal-account-header .btn-close:before, .modal-delete-header .btn-close:before {
+    content: '\00D7';
+}
+
+.modal-account-header .btn-close:hover, .modal-delete-header .btn-close:hover {
+    color: #666;
+}
+
+.modal-form-account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-form-account label {
+    color: #333;
+    font-weight: bold;
+}
+
+.modal-account-submit-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.modal-account-submit-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.modal-delete-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+
+.modal-delete-confirm-button, .modal-delete-cancel-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+    width: 100px;
+}
+
+.modal-delete-confirm-button {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.modal-delete-confirm-button:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.modal-delete-cancel-button {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.modal-delete-cancel-button:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.modal-account-header button:hover {
+    box-shadow: none;
+}

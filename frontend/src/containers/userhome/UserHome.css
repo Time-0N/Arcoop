@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+}
+
+.user-page {
+    overflow: hidden;
+    font-family: Coop;
+    z-index: 2;
+    background-image: url("../../assets/userhome/UserHome_Background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-details-container {
+    background-color: rgba(0, 86, 179, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.user-details-container h1 {
+    text-align: center;
+    font-size: 44px;
+    background: -webkit-linear-gradient(#ff5404, #ff8605);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.UserName {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.UserName span {
+    font-size: 32px;
+}
+
+.UserMedals span {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+
+.button-container button {
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 0 5px;
+}
+
+.menu-button.settings {
+    background-image: url('../../assets/userhome/SettingsIcon.png');
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 24px;
+    background-position-x: 10px;
+    padding-inline-start: 40px;
+}
+
+.menu-button.shop {
+    background-image: url("../../assets/userhome/ShopIcon.png");
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 24px;
+    background-position-x: 10px;
+    padding-inline-start: 40px;
+}
+
+.menu-button.play {
+    background-image: url("../../assets/userhome/PlayIcon.png");
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 30px;
+    background-position-x: 10px;
+    padding-inline-start: 40px;
+}
+
+.menu-button.logout {
+    background-image: url("../../assets/userhome/LogoutIcon.png");
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 24px;
+    background-position-x: 10px;
+    padding-inline-start: 40px;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}

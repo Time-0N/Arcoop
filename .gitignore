@@ -1,0 +1,56 @@
+# === Java / Spring Boot (Gradle Kotlin DSL) ===
+/build/
+/out/
+/.gradle/
+/.idea/
+/*.iml
+
+# === Gradle Wrapper ===
+!gradle/wrapper/gradle-wrapper.jar
+.gradle/
+/gradle-app.setting
+
+# === Kotlin ===
+*.class
+*.jar
+*.war
+*.ear
+*.kotlin_module
+*.log
+
+# === Node.js / Vite (React frontend) ===
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.vite/
+
+# === IntelliJ IDEA ===
+.idea/
+*.iws
+*.ipr
+*.iml
+*.class
+
+# === OS-specific ===
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# === Logs & Temporary Files ===
+*.log
+*.tmp
+*.swp
+
+# === Environment Files ===
+.env
+.env.local
+.env.*.local
+/frontend/.env
+/frontend/.env.*
+
+# === Test Reports & Coverage ===
+/coverage/
+/build/reports/
+/build/test-results/
+/jacoco.exec
+/target/

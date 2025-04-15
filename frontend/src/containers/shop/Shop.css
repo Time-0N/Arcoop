@@ -1,0 +1,105 @@
+.shop-container {
+    background-image: url("../../assets/shop/Shop_Background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.shop-content {
+    display: flex;
+    flex-direction: column; /* Ensure vertical layout */
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(0, 86, 179, 0.8);
+    border-radius: 10px;
+    max-width: 800px; /* Adjusted max-width for wider display */
+    margin: 20px auto;
+    overflow-x: auto; /* Allow horizontal scrolling if necessary */
+}
+
+.color-item {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 200px; /* Adjusted min-width for scrollable items */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.color-item.equipped {
+    background-color: #6c757d; /* Greyed out for equipped color */
+    pointer-events: none; /* Make button not clickable */
+}
+
+.color-item:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.color-code {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.color-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.color-price {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Ensure text is centered */
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.buy-button {
+    background-color: #28a745;
+}
+
+.buy-button:hover {
+    background-color: #218838;
+}
+
+.equip-button {
+    background-color: #ffc107;
+}
+
+.equip-button:hover {
+    background-color: #e0a800;
+}
+
+.equipped .equip-button {
+    background-color: #6c757d;
+    cursor: not-allowed; /* Change cursor to indicate non-clickable button */
+}
