@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  backend:
+    image: masterbaiter/arcoop-backend:latest
+    container_name: arcoop-backend
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/CSDB
+      - SPRING_DATASOURCE_USERNAME=user
+      - SPRING_DATASOURCE_PASSWORD=Password
+      - JWT_SECRET_KEY=dev-secret-key-1234567890
+    depends_on:
+      - db
+    networks:
+      - arcoop-network
+
+  frontend:
+    image: masterbaiter/arcoop-frontend:latest
+    container_name: arcoop-frontend
+    ports:
+      - "3000:80"
+    networks:
+      - arcoop-network
+
+  db:
+    image: postgres:16
+    container_name: arcoop-db
+    restart: always
+    environment:
+      - POSTGRES_DB=CSDB
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=Password
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - arcoop-network
+
+volumes:
+  postgres-data:
+
+networks:
+  arcoop-network:
+    driver: bridge
