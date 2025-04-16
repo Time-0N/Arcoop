@@ -28,7 +28,7 @@ jobs:
           context: ./backend
           file: ./backend/Dockerfile
           push: true
-          tags: haat3/arcoop-backend:latest
+          tags: masterbaiter/arcoop-backend:latest
 
       - name: Build and Push Frontend
         uses: docker/build-push-action@v5
@@ -36,4 +36,4 @@ jobs:
           context: ./frontend
           file: ./frontend/Dockerfile
           push: true
-          tags: haat3/arcoop-frontend:latest
+          tags: masterbaiter/arcoop-frontend:latest
