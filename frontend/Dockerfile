@@ -1,7 +1,5 @@
-# frontend/Dockerfile
-
 # Stage 1 – Build the frontend
-FROM node:20-alpine AS build
+FROM node:20 AS build
 WORKDIR /app
 
 COPY package*.json ./
@@ -10,7 +8,8 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-# Stage 2 – Serve with nginx
+# Just Nginx – no build step
 FROM nginx:alpine
-COPY --from=build /app/dist /usr/share/nginx/html
+COPY ./dist /usr/share/nginx/html
 EXPOSE 80
+
