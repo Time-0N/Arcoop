@@ -3,7 +3,6 @@ package com.example.backend.model.entity;
 //import com.example.backend.Initialization.ColorInitializer;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.PositiveOrZero;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -28,7 +27,6 @@ public class Color {
 	@Column(nullable = false)
 	private String colorCode;
 
-	@PositiveOrZero
 	@Column(nullable = false)
 	private BigDecimal price;
 
