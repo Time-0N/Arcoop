@@ -11,7 +11,7 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/CSDB
       - SPRING_DATASOURCE_USERNAME=user
       - SPRING_DATASOURCE_PASSWORD=Password
-      - JWT_SECRET_KEY=dev-secret-key-1234567890
+      - JWT_SECRET_KEY="MzJieXRlc2xvbmdzZWNyZXRzZWNyZXRzZWNyZXRzZW8="
     depends_on:
       - db
     networks:
